@@ -104,7 +104,7 @@ void			do_some_unicode_pls(int uni)
 	char		*bits_line;
 
 	bits_line = ft_itoa_base(uni, 2);
-	if (ft_strlen(bits_line) <= 7)
+	if (uni <= 127 || (uni <= 255 && MB_CUR_MAX == 1))
 		write(1, &uni, 1);
 	else if (ft_strlen(bits_line) <= 11 && ft_strlen(bits_line) > 7)
 		bits_line_2(bits_line, 7, ft_strlen(bits_line) - 1, 1);
