@@ -23,7 +23,7 @@ static	char	*dh_size_arg_line(t_printf *pf, short x)
 	manege_prefix_d(pf, x);
 	if (x < 0)
 	{
-		buf = ft_itoa_base((x * -1), 10);
+		buf = ft_itoa_base(((long)x * -1), 10);
 		pf->prefix = '-';
 	}
 	else
@@ -79,7 +79,7 @@ static	char	*dnone_size_arg_line(t_printf *pf, int x)
 	manege_prefix_d(pf, x);
 	if (x < 0)
 	{
-		buf = ft_itoa_base(x * -1, 10);
+		buf = ft_itoa_base((long)x * -1, 10);
 		pf->prefix = '-';
 	}
 	else
@@ -107,7 +107,7 @@ static	char	*dhh_size_arg_line(t_printf *pf, char x)
 	manege_prefix_d(pf, x);
 	if (x < 0)
 	{
-		buf = ft_itoa_base(x * -1, 10);
+		buf = ft_itoa_base((long)x * -1, 10);
 		pf->prefix = '-';
 	}
 	else
