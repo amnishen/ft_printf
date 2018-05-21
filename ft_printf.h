@@ -84,12 +84,12 @@ void			make_prefix_line(t_printf *pf);
 void			make_width_line(t_printf *pf, char *arg_line);
 void			go_to_print(t_printf *pf, char *arg_line);
 void			manege_prefix_d(t_printf *pf, long x);
-char			*dz_size_arg_line(t_printf *pf, size_t x);
 char			*oz_size_arg_line(t_printf *pf);
 char			*uz_size_arg_line(t_printf *pf);
 char			*xz_size_arg_line(t_printf *pf);
 void			unicode_write(int *tab, int size);
 int				gimme_some_int(char *bits_line, int *y);
 int				atoi_binary(char *str);
+char			*ft_itoa(long n);
 
 #endif

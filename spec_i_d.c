@@ -132,10 +132,8 @@ void			spec_i_d(t_printf *pf)
 		arg_line = dh_size_arg_line(pf, (short)va_arg(pf->arg, int));
 	else if (pf->size_spec == 'H')
 		arg_line = dhh_size_arg_line(pf, (char)va_arg(pf->arg, int));
-	else if (pf->size_spec == 'z')
-		arg_line = dz_size_arg_line(pf, va_arg(pf->arg, size_t));
 	else if (pf->size_spec == 'l' || pf->size_spec == 'L' ||
-				pf->type == 'D' || pf->size_spec == 'j')
+				pf->type == 'D' || pf->size_spec == 'j' || pf->size_spec == 'z')
 		arg_line = dl_size_arg_line(pf, va_arg(pf->arg, long));
 	else
 		arg_line = dnone_size_arg_line(pf, va_arg(pf->arg, int));
